@@ -105,7 +105,7 @@ callback_list = [
 ]
 
 # layer developing
-text_input_layer = Input(shape=(500,))
+text_input_layer = Input(shape=(max_len,))
 embedding_layer = Embedding(max_words, 50)(text_input_layer)
 text_layer = Conv1D(256, 3, activation='relu')(embedding_layer)
 text_layer = MaxPooling1D(3)(text_layer)
